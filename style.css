@@ -1,0 +1,156 @@
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    image-rendering: crisp-edges!important;
+    /* image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges; */
+  }
+  /* .sfondo{
+    background-image: url("/assets/frame12.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    image-rendering: pixelated;
+  } */
+.title{
+    height: 12vw;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: bicubic;
+}
+.playStore{
+    height: 15vh;   
+    margin-top: 12.5vh;
+}
+.video {
+    position: relative;
+    width: 80%;
+    padding-bottom: 40%; 
+    height: 100px;
+  }
+  .video iframe{
+    position: absolute;
+    top: 8px !important;
+    left: 0;
+    width: 89%;
+    height: 100%;
+  }
+.padding-button{
+    padding-top: 5px;
+}
+.padding-button-google{
+    padding-top: 5px;
+}
+.buttonDiscord{
+    border: 2px solid white#a6a6a6!important;
+    background-color: #0D6EFD !important;
+    color: white!important;
+    height: 78%;
+    font-size: 25px!important;
+    font-family: 'Roboto',  !important;
+    font-weight: bold!important;
+    width: 300px;
+}
+.testo{
+    color: white;
+    padding-left: 100px!important;
+    font-size: 23px;
+    font-weight: bold;
+    text-shadow: -2px 0px black, -2px -2px black, -2px 2px black, 2px 0px black, 2px -2px black, 2px 2px black, 0px 0px black, 0px -2px black, 0px 2px black;
+    font-family: 'Roboto',   
+}
+
+iframe{
+    height: 10vh;
+} 
+.paddingDiscord{
+    padding-top: 15.8vh;
+}
+@media only screen and (max-width: 950px) {
+    .title {height: 30vw !important;}
+    .testo{
+        font-size: 13px;
+        padding: 0!important;
+    }
+    .paddingDiscord{
+      margin-top: 3vh!important;
+    }
+    .playStore{
+        padding-top: 4vh;
+    } 
+    .buttonDiscord{
+        width: 300px;
+        height: 7vh;
+    } 
+    
+    .testo{
+        text-shadow: -1px 0px black, -1px -1px black, -1px 1px black, 1px 0px black, 1px -1px black, 1px 1px black, 0px 0px black, 0px -1px black, 0px 1px black;
+
+    }
+    .video iframe {position: absolute;
+        top:0;
+        left: 20px;
+        width: 89%;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .title {
+            height: 35vw !important;}
+    .paddingDiscord{
+        padding: 0;
+    }
+    .playStore{
+        margin: 0;
+        
+    } 
+    .buttonDiscord{
+        width: 50vw;
+        height: 12vh;
+    }      
+    .video iframe {position: absolute;
+        top:0;
+        left: 15px;
+        width: 89%;
+        height: 100%;
+    }
+    .testo{
+        font-size: 15px;
+        text-shadow: -1px 0px black, -1px -1px black, -1px 1px black, 1px 0px black, 1px -1px black, 1px 1px black, 0px 0px black, 0px -1px black, 0px 1px black;
+        padding: 0!important;
+    }
+
+}
+@media only screen and (max-width: 300px) {
+    .title {
+        height: 40vw !important;
+    }
+    .testo{
+        font-size: 11px;
+    }
+    .video iframe{
+        top: 2px !important;;
+      }
+    .buttonDiscord{
+        width: 70vw;
+        height: 12vh;
+    }  
+}
+
+
+/* @media only screen and (max-width: 850px) {
+    .video iframe {position: absolute;
+                   top:0;
+                   left: 0;
+                   width: 200%;
+                   height: 80%;}
+    } */
