@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Titolo sheda -->
+    <!-- Tab title -->
     <title>Escape The Dungeon</title>
-    <!-- Icona acheda -->
-    <link rel="icon" type="image/x-icon" href="/assets/io2.ico" />
+    <!-- Tab icon -->
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -27,38 +27,39 @@
     />
   </head>
   <body>
-    <!-- Sfondo con video -->
+    <!-- Background Video -->
     <video id="background-video" autoplay loop muted>
-      <source src="/assets/final2.mp4" type="video/mp4" />
+      <source src="/assets/backVideo.mp4" type="video/mp4" />
     </video>
-    <!-- Contenitore genitore di tutto -->
+    <!-- Container of everything -->
     <div class="container-fluid text-center sfondo">
       <div class="row">
-        <!-- Immagine titolo -->
+        <!-- Title -->
         <div class="col-12 align-self-center">
-          <img class="title pt-5" src="/assets/titolo.png" alt="title" />
+          <img class="title pt-5" src="/assets/title.png" alt="title" />
         </div>
-        <div class="row align-content-center">
-          <!-- Testo -->
-          <div class="col-12 col-md-6 mt-5 pt-5">
+        <!-- Row Text and Video -->
+        <div class="row justify-content-center align-items-center mt-5">
+          <!-- Description -->
+          <div class="col-12 col-md-6 mt-5">
             <p class="testo text-break">
-              Only one possible thing to do: JUMP. On this platform you have to
+              Only one possible thing to do: JUMP! On this platform you have to
               climb to the top.
             </p>
             <p class="testo text-break">
               Soon by just playing you will be able to earn unique skins that
-              are also NFT! New levels, new graphics and other exciting features
-              are about to arrive. The game will come out for desktop and IOS
+              are also NFT! New levels, new graphics and others exciting features
+              are about to arrive. The game is coming for desktop and IOS
               too.
             </p>
           </div>
-          <!-- Video youtube -->
-          <div class="col-12 col-md-6 d-flex justify-content-center mt-5">
+          <!-- Youtube Video -->
+          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
             <div class="video">
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube-nocookie.com/embed/Xd1PseYn4fw?autoplay=1&mute=1"
+                src="https://www.youtube-nocookie.com/embed/Xd1PseYn4fw?autoplay=1&mute=1&loop=1&playlist=Xd1PseYn4fw"
                 title="Gameplay"
                 frameborder="0"
                 allow="accelerometer;  mute; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -67,23 +68,20 @@
             </div>
           </div>
         </div>
-        <div class="row align-content-center">
-          <!-- Icona playstore -->
-          <div
-            class="col col-md-6 d-flex justify-content-center justify-content-md-end padding-button-google"
-          >
-            <a
-              href="https://play.google.com/store/apps/details?id=it.cervus.jumpqualcosa&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-              ><img
+        <!-- Links -->
+        <div class="row justify-content-center">
+          <!-- PlayStore Badge -->
+          <div class="col col-md-6 d-flex justify-content-center justify-content-md-end padding-button-google">
+            <a href="https://play.google.com/store/apps/details?id=it.cervus.jumpqualcosa&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+              <img
                 class="playStore"
                 alt="Get it on Google Play"
                 src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-            /></a>
+              />
+            </a>
           </div>
-          <!-- Icona Discord -->
-          <div
-            class="col col-md-6 d-flex justify-content-center justify-content-md-start paddingDiscord"
-          >
+          <!-- Discord Link -->
+          <div class="col col-md-6 d-flex justify-content-center justify-content-md-start paddingDiscord">
             <a href="https://discord.gg/DsU5wktA7f">
               <button type="button" class="buttonDiscord btn btn-light">
                 <i class="bi bi-discord"> </i>Join us on Discord
