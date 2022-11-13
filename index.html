@@ -26,8 +26,7 @@
       rel="stylesheet"
     />
   </head>
-  <body style="background-color: black">
-    
+  <body style="background-color: black; visibility: hidden;">
     <!-- Background Video -->
     <video id="background-video" autoplay loop muted>
       <source src="/assets/backVideo.mp4" type="video/mp4" />
@@ -49,13 +48,15 @@
             </p>
             <p class="testo text-break">
               Soon by just playing you will be able to earn unique skins that
-              are also NFT! New levels, new graphics and others exciting features
-              are about to arrive. The game is coming for desktop and IOS
-              too.
+              are also NFT! New levels, new graphics and others exciting
+              features are about to arrive. The game is coming for desktop and
+              IOS too.
             </p>
           </div>
           <!-- Youtube Video -->
-          <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+          <div
+            class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+          >
             <div class="video">
               <iframe
                 width="560"
@@ -72,8 +73,12 @@
         <!-- Links -->
         <div class="row justify-content-center">
           <!-- PlayStore Badge -->
-          <div class="col col-md-6 d-flex justify-content-center justify-content-md-end padding-button-google">
-            <a href="https://play.google.com/store/apps/details?id=it.cervus.jumpqualcosa&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+          <div
+            class="col col-md-6 d-flex justify-content-center justify-content-md-end padding-button-google"
+          >
+            <a
+              href="https://play.google.com/store/apps/details?id=it.cervus.jumpqualcosa&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            >
               <img
                 class="playStore"
                 alt="Get it on Google Play"
@@ -82,7 +87,9 @@
             </a>
           </div>
           <!-- Discord Link -->
-          <div class="col col-md-6 d-flex justify-content-center justify-content-md-start paddingDiscord">
+          <div
+            class="col col-md-6 d-flex justify-content-center justify-content-md-start paddingDiscord"
+          >
             <a href="https://discord.gg/DsU5wktA7f">
               <button type="button" class="buttonDiscord btn btn-light">
                 <i class="bi bi-discord"> </i>Join us on Discord
@@ -95,16 +102,15 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script>
-      document.onreadystatechange = function() {
-          if (document.readyState !== "complete") {
-              document.querySelector("body").style.visibility = "hidden";
-          } else {
-              document.querySelector("body").style.visibility = "visible";
-              document.querySelector("body").classList.add("fade");
-          }
+      document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+          document.querySelector("body").style.visibility = "visible";
+          document.querySelector("body").classList.add("fade");
+        }
       };
-  </script>
+    </script>
   </body>
 </html>
