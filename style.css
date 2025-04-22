@@ -52,13 +52,13 @@
 }
 
 .buttonDiscord {
-  border: 2px solid white#a6a6a6 !important;
+  border: 2px solid white !important; /* Fixed typo: changed white#a6a6a6 to white */
   background-color: #0d6efd !important;
   color: white !important;
   height: 78%;
   font-size: 25px !important;
   font-family: "Roboto" !important;
-  font-weight: bold !important;
+  font-weight: bold !important; /* This will now use the imported 700 weight */
   width: 300px;
 }
 
@@ -174,7 +174,7 @@
 
 @font-face {
   font-family: "ETDFont";
-  src: url("/assets/ETDFont.ttf") format("truetype");
+  src: url("assets/ETDFont.ttf") format("truetype"); /* Changed path from absolute to relative */
   font-style: normal;
 }
 
