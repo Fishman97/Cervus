@@ -1,116 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Tab title -->
-    <title>Escape The Dungeon</title>
-    <!-- Tab icon -->
-    <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body style="background-color: black; visibility: hidden;">
-    <!-- Background Video -->
-    <video id="background-video" autoplay loop muted>
-      <source src="assets/backVideo.mp4" type="video/mp4" />
-    </video>
-    <!-- Container of everything -->
-    <div class="container-fluid text-center">
-      <div>
-        <!-- Title -->
-        <div class="col-12 align-self-center">
-          <img class="title pt-5" src="assets/title.png" alt="title" />
-        </div>
-        <!-- Row Text and Video -->
-        <div class="row justify-content-center align-items-center mt-5">
-          <!-- Description -->
-          <div class="col-12 col-md-6 mt-5">
-            <p class="testo text-break">
-              Only one possible thing to do: JUMP! On this platform you have to
-              climb to the top.
-            </p>
-            <p class="testo text-break">
-              Soon by just playing you will be able to earn unique skins that
-              are also NFT! New levels, new graphics and others exciting
-              features are about to arrive. The game is coming for desktop and
-              IOS too.
-            </p>
-          </div>
-          <!-- Youtube Video -->
-          <div
-            class="col-12 col-md-6 d-flex justify-content-center align-items-center"
-          >
-            <div class="video">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/Xd1PseYn4fw?autoplay=1&mute=1&loop=1&playlist=Xd1PseYn4fw"
-                title="Gameplay"
-                frameborder="0"
-                allow="accelerometer;  mute; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-        <!-- Links -->
-        <div class="row justify-content-center">
-          <!-- PlayStore Badge -->
-          <div
-            class="col col-md-6 d-flex justify-content-center justify-content-md-end padding-button-google"
-          >
-            <a
-              href="https://play.google.com/store/apps/details?id=it.cervus.jumpqualcosa&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-            >
-              <img
-                class="playStore"
-                alt="Get it on Google Play"
-                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-              />
-            </a>
-          </div>
-          <!-- Discord Link -->
-          <div
-            class="col col-md-6 d-flex justify-content-center justify-content-md-start paddingDiscord"
-          >
-            <a href="https://discord.gg/DsU5wktA7f">
-              <button type="button" class="buttonDiscord btn btn-light">
-                <i class="bi bi-discord"> </i>Join us on Discord
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      document.onreadystatechange = function () {
-        if (document.readyState == "complete") {
-          document.querySelector("body").style.visibility = "visible";
-          document.querySelector("body").classList.add("fade");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervus Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/cervus_ico.png" type="image/png">
+    <style>
+        /* Reset some default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      };
-    </script>
-  </body>
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body.home {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center items horizontally */
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            color: #333;
+            font-family: sans-serif;
+            padding: 40px;
+        }
+
+        .home-logo-container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px; /* Space below logo */
+        }
+
+        .home-logo {
+            max-width: 400px; /* Adjusted logo size */
+            height: auto;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+
+        .main-content-area {
+            display: flex;
+            width: 100%;
+            max-width: 1200px; /* Limit overall width */
+            gap: 50px; /* Slightly larger gap to accommodate wider boxes */
+            justify-content: center; /* Center the two columns */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            align-items: flex-start; /* Align columns to the top */
+        }
+
+        .projects-column {
+            flex: 1; /* Take up half the space */
+            min-width: 300px; /* Minimum width before wrapping */
+            display: flex;
+            flex-direction: row; /* Arrange project boxes horizontally */
+            justify-content: center; /* Center boxes horizontally */
+            flex-wrap: wrap; /* Allow wrapping if needed */
+            align-items: flex-start; /* Align boxes to the top */
+            gap: 30px; /* Adjust gap */
+        }
+
+        .project-box {
+            width: 45%; /* Increased width percentage significantly */
+            max-width: 450px; /* Increased max-width */
+            display: block; /* Make the container a block */
+            transition: transform 0.2s ease;
+        }
+
+        .project-box a {
+            display: block; /* Make link fill the container */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px; /* Padding inside the link */
+            box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+            transition: box-shadow 0.2s ease;
+            text-decoration: none; /* Remove underline from link */
+            height: 200px; /* Make boxes less tall */
+            display: flex; /* Use flex to center image inside link */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-box:hover {
+            transform: translateY(-4px);
+        }
+        .project-box a:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .project-box img {
+            width: 180px; /* Adjust image width */
+            height: 120px; /* Adjust image height to be less tall */
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            margin-bottom: 0; /* Removed margin as text is gone */
+        }
+
+        .team-column {
+            flex: 1; /* Take up half the space */
+            min-width: 300px; /* Minimum width before wrapping */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the .team-members container */
+            gap: 25px; /* Space between team cards */
+        }
+
+        .team-section h2, .projects-column h2 { /* Shared heading style */
+             width: 100%;
+             text-align: center;
+             margin-bottom: 25px;
+             font-size: 1.8em;
+             color: #555;
+        }
+
+        .team-members {
+            display: flex;
+            flex-direction: row; /* Ensure horizontal layout */
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Reduced gap between member cards */
+            width: 100%;
+        }
+
+        .member-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px; /* Adjust padding */
+            width: 260px; /* Slightly reduced card width */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+         .member-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .member-card img {
+            width: 120px; /* Larger image */
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            background-color: #ccc;
+        }
+
+        .member-card h3 {
+            margin-bottom: 8px; /* Space below name */
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .member-card a.linkedin-link {
+            display: inline-block; /* Allow margin */
+            margin-top: 10px; /* Space above link */
+            text-decoration: none;
+            color: #0077b5; /* LinkedIn blue */
+            font-weight: bold;
+        }
+         .member-card a.linkedin-link:hover {
+             text-decoration: underline;
+         }
+
+        /* Footer Styles */
+        footer {
+            width: 100%;
+            text-align: center;
+            margin-top: 60px; /* More space above footer */
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #777;
+            /* Removed absolute positioning */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) { /* Adjust breakpoint for when columns stack */
+             .main-content-area {
+                flex-direction: column; /* Stack columns */
+                align-items: center;
+            }
+            .projects-column, .team-column {
+                width: 100%;
+                max-width: 600px; /* Adjust max-width */
+            }
+            .project-box {
+                width: 45%; /* Keep similar width when stacked */
+                max-width: 350px;
+            }
+            .project-box a {
+                height: 180px; /* Adjust height */
+            }
+            .project-box img {
+                width: 150px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body.home {
+                padding: 20px;
+            }
+            .main-content-area {
+                flex-direction: column; /* Stack columns */
+                align-items: center;
+                gap: 30px;
+            }
+            .projects-column, .team-column {
+                width: 100%;
+                max-width: 400px; /* Limit width on mobile */
+            }
+            .home-logo {
+                max-width: 300px;
+            }
+             .projects-column,
+             .team-members {
+                 gap: 20px;
+             }
+             .project-box {
+                 width: 80%;
+                 max-width: 400px; /* Allow wider boxes on tablet */
+             }
+             .project-box a {
+                 height: 180px;
+             }
+             .project-box img {
+                 width: 150px;
+                 height: 100px;
+             }
+             .member-card {
+                 width: 240px; /* Adjust size for mobile */
+             }
+             .member-card img {
+                 width: 100px;
+                 height: 100px;
+             }
+        }
+
+         @media (max-width: 500px) { /* Stack items within columns on very small screens */
+             .projects-column {
+                 flex-direction: column; /* Stack projects on very small screens */
+                 align-items: center;
+             }
+             .project-box {
+                 width: 90%; /* Nearly full width */
+                 max-width: 350px; /* Allow wider boxes on mobile */
+             }
+              .project-box a {
+                 height: 160px;
+                 padding: 15px;
+             }
+             .project-box img {
+                 width: 130px;
+                 height: 90px;
+             }
+             .team-members {
+                 flex-direction: column; /* Stack team members on very small screens */
+                 align-items: center;
+             }
+         }
+
+    </style>
+</head>
+<body class="home">
+
+    <div class="home-logo-container">
+        <img src="assets/cervus_logo.png" alt="Cervus Studio Logo" class="home-logo">
+    </div>
+
+    <div class="main-content-area">
+        <!-- Projects Column (Left) -->
+        <section class="projects-column">
+            <h2>Our Projects</h2>
+            <div class="project-box">
+                <a href="EscapeTheDungeon.html">
+                    <img src="assets/title.png" alt="Escape The Dungeon Thumbnail">
+                </a>
+            </div>
+            <div class="project-box">
+                <a href="#">
+                    <img src="assets/cervus_ico.png" alt="Coming Soon Thumbnail">
+                </a>
+            </div>
+        </section>
+
+        <!-- Team Column (Right) -->
+        <section class="team-column">
+            <h2>Our Team</h2>
+            <div class="team-members">
+                <div class="member-card">
+                    <img src="assets/placeholder_member1.png" alt="Team Member 1">
+                    <h3>Member 1 Name</h3>
+                    <a href="#" class="linkedin-link" target="_blank">LinkedIn Profile</a>
+                </div>
+                <div class="member-card">
+                    <img src="assets/placeholder_member2.png" alt="Team Member 2">
+                    <h3>Member 2 Name</h3>
+                    <a href="#" class="linkedin-link" target="_blank">LinkedIn Profile</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cervus Studio</p>
+    </footer>
+
+</body>
 </html>

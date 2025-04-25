@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tab title -->
+    <title>Escape The Dungeon</title>
+    <!-- Tab icon -->
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        .back-button {
+            position: fixed; /* Keep it in place even when scrolling */
+            top: 20px;
+            left: 20px;
+            z-index: 1000; /* Ensure it's above other elements */
+            padding: 8px 15px;
+            background-color: rgba(255, 255, 255, 0.8); /* White with some transparency */
+            color: #333; /* Dark text for contrast */
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: sans-serif; /* Use a standard font */
+            font-weight: bold;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+        }
+    </style>
+  </head>
+  <body style="background-color: black; visibility: hidden;">
+    <a href="index.html" class="back-button">&lt; Back to Cervus Studio</a>
+
+    <!-- Background Video -->
+    <video id="background-video" autoplay loop muted>
+      <source src="assets/backVideo.mp4" type="video/mp4" />
+    </video>
+    <!-- Container of everything -->
+    <div class="container-fluid text-center">
+      <div>
+        <!-- Title -->
+        <div class="col-12 align-self-center">
+          <img class="title pt-5" src="assets/title.png" alt="title" />
+        </div>
+        <!-- Row Text and Video -->
+        <div class="row justify-content-center align-items-center mt-5">
+          <!-- Description -->
+          <div class="col-12 col-md-6 mt-5">
+            <p class="testo text-break">
+              Only one possible thing to do: JUMP! On this platform you have to
+              climb to the top.
+            </p>
+            <p class="testo text-break">
+              Soon by just playing you will be able to earn unique skins that
+              are also NFT! New levels, new graphics and others exciting
+              features are about to arrive. The game is coming for desktop and
+              IOS too.
+            </p>
+          </div>
+          <!-- Youtube Video -->
+          <div
+            class="col-12 col-md-6 d-flex justify-content-center align-items-center"
+          >
+            <div class="video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Xd1PseYn4fw?autoplay=1&mute=1&loop=1&playlist=Xd1PseYn4fw"
+                title="Gameplay"
+                frameborder="0"
+                allow="accelerometer;  mute; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- Links -->
+        <div class="row justify-content-center">
+          <!-- PlayStore Badge -->
+          <div
+            class="col col-md-6 d-flex justify-content-center justify-content-md-end padding-button-google"
+          >
+            <a
+              href="https://play.google.com/store/apps/details?id=it.cervus.jumpqualcosa&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+            >
+              <img
+                class="playStore"
+                alt="Get it on Google Play"
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              />
+            </a>
+          </div>
+          <!-- Discord Link -->
+          <div
+            class="col col-md-6 d-flex justify-content-center justify-content-md-start paddingDiscord"
+          >
+            <a href="https://discord.gg/DsU5wktA7f">
+              <button type="button" class="buttonDiscord btn btn-light">
+                <i class="bi bi-discord"> </i>Join us on Discord
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+          document.querySelector("body").style.visibility = "visible";
+          document.querySelector("body").classList.add("fade");
+        }
+      };
+    </script>
+  </body>
+</html>
